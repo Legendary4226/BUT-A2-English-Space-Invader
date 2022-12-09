@@ -1,11 +1,13 @@
 from game.entities.ships.Invader import Invader
 
 class SpeedInvader (Invader):
-    def __init__(self):
+    def __init__(self: Invader):
         self.initProperties()
 
     def initProperties(self) -> None:
-        self._damage = 10
-        self._max_hp  = 100
-        self._hp = 100
-        self._shot_speed = 20
+        self._damage = 5
+        self._max_hp  = 75
+        self._hp = 75
+        self._speed = 30
+        self._shoot_speed = 30
+

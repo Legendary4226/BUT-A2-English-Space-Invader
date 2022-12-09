@@ -4,33 +4,16 @@ SHOOT_BOTTOM = -1
 SHOOT_LEFT = 2
 
 class Entity:
-    def __init__(self):
-        self._position = [0, 0]
-
-        self._hp = 0 # not
-        self._speed = 0
-        self._damage = 0
-        self._shoot_direction = SHOOT_BOTTOM
+    _position = [0, 0] 
+    _speed = 0
+    _damage = 0
+    _shoot_direction = SHOOT_BOTTOM
     
-    def initProperties(self):
+    def initProperties(self) -> None:
         pass
 
-    def setPosition(self, new_position) -> None:
+    def setPosition(self, new_position: list[int,int]) -> None:
         self._position = new_position
 
-    def setSpeed(self, new_speed):
-        self._speed = new_speed
-
-    def takeDamage(self, damage) -> None:
-        self._hp -= damage
-        if (self._hp < 0):
-            self._hp = 0
-
-    def isDead(self) -> bool:
-        return self._hp == 0
-
-    def isAlive(self) -> bool:
-        return self._hp > 0
-
-    def shot(self):
-        pass
+    def toString(self) -> str:
+        return 'position ' + str(self._position) + ' speed: ' + str(self._speed) + ' damage: '+ str(self._damage) + ' shot_direction: ' + str(self._shoot_direction)

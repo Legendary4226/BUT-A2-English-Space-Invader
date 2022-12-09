@@ -5,7 +5,9 @@ class EavyInvader (Invader):
         self.initProperties()
 
     def initProperties(self) -> None:
-        self._damage = 10
-        self._max_hp  = 100
-        self._hp = 100
-        self._shot_speed = 20
+        self._damage = 20
+        self._max_hp  = 250
+        self._hp = 250
+        self._speed = 10
+        self._shoot_speed = 20
+    

@@ -1,9 +1,11 @@
 from game.Entity import Entity
 
 class Bullet(Entity):
-    def __init__(self, position):
-        self.super()
-        self.initPosition(position)
+    def __init__(self, position: list[int,int], speed: int, damage: int, shoot_direction: int) -> None:
+        self.initProperties(position,speed,damage,shoot_direction)
 
-    def initPosition(self, position):
-        self._position = position
+    def initProperties(self, position: list[int,int], speed: int, damage: int, shoot_direction: int) -> None:
+        self._position = position 
+        self._speed = speed
+        self._damage = damage
+        self._shoot_direction = shoot_direction
