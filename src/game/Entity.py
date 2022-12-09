@@ -7,17 +7,15 @@ SHOOT_BOTTOM = -1
 SHOOT_LEFT = 2
 
 class Entity(sprite.Sprite):
+    _position = [0, 0] 
+    _speed = 0
+    _damage = 0
+    _shoot_direction = SHOOT_BOTTOM
+    image = None
+    rect = None
+    
     def __init__(self):
         super().__init__()
-        self._position = [0, 0]
-
-        self._hp = 0 # not
-        self._speed = 0
-        self._damage = 0
-        self._shoot_direction = SHOOT_BOTTOM
-
-        self.image = None
-        self.rect = None
     
     def initProperties(self):
         pass
@@ -32,6 +30,9 @@ class Entity(sprite.Sprite):
         pass
 
 
-    def setImage(url):
+    def setImage(self, url):
         self.image = image.load(url)
         self.rect = self.image.get_rect()
+    
+    def draw(self):
+        pass

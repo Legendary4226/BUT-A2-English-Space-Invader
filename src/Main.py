@@ -2,6 +2,8 @@ import pygame
 from pygame.locals import *
 from interface.EntitiesManager import EntityManager
 
+from game.entities.Ship import Ship
+
 pygame.init()
 
 font = pygame.font.SysFont("Arial", 20, bold=False, italic=False)
@@ -25,14 +27,16 @@ entityManager = EntityManager()
 
 # TESTS
 
-
+ship = Ship()
+ship.setImage("src/img/ship.png")
+entityManager.addEntity(ship)
 
 # END TESTS
 
 # MAIN LOOP
 launched = True
 while launched:
-    if pygame.event.get(pygame.QUIT).type != None:
+    if len(pygame.event.get(pygame.QUIT)) == 1:
         launched = False
 
     entityManager.draw()
