@@ -22,22 +22,11 @@ class Entity(sprite.Sprite):
     def initProperties(self):
         pass
 
-    def setPosition(self, new_position) -> None:
+    def setPosition(self, new_position: list[int,int]) -> None:
         self._position = new_position
 
-    def setSpeed(self, new_speed):
-        self._speed = new_speed
-
-    def takeDamage(self, damage) -> None:
-        self._hp -= damage
-        if (self._hp < 0):
-            self._hp = 0
-
-    def isDead(self) -> bool:
-        return self._hp == 0
-
-    def isAlive(self) -> bool:
-        return self._hp > 0
+    def toString(self) -> str:
+        return 'position ' + str(self._position) + ' speed: ' + str(self._speed) + ' damage: '+ str(self._damage) + ' shot_direction: ' + str(self._shoot_direction)
 
     def shot(self):
         pass
