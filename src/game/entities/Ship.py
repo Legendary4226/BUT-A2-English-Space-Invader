@@ -23,10 +23,4 @@ class Ship(Entity):
 
     def toString(self) -> str:
         return super().toString()+ ' hp: '+ str(self._hp)+ ' shot_speed: '+ str(self._shoot_speed)+ ' shot_direction: '+ str(self._shoot_direction)
-        
-    def draw(self, screen):
-        screen.blit(self.image, self._position)
-
-        # Move
-        self._position[0] += self._speed
     

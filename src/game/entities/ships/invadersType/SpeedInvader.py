@@ -8,6 +8,6 @@ class SpeedInvader (Invader):
         self._damage = 5
         self._max_hp  = 75
         self._hp = 75
-        self._speed = 30
+        self._speed = 0.2
         self._shoot_speed = 30
 

@@ -8,6 +8,6 @@ class EavyInvader (Invader):
         self._damage = 20
         self._max_hp  = 250
         self._hp = 250
-        self._speed = 10
+        self._speed = 0.05
         self._shoot_speed = 20
     

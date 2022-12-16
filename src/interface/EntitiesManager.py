@@ -1,5 +1,3 @@
-import pygame
-
 class EntityManager:
     entities = []
 
@@ -10,6 +8,9 @@ class EntityManager:
 
     def addEntity(self, entity):
         self.entities.append(entity)
+
+    def deleteEntity(self, entity):
+        self.entities.remove(entity)
 
     def clear(self):
         for entity in self.entities:
