@@ -1,3 +1,4 @@
+import pygame
 from pygame import sprite
 from pygame import image
 
@@ -11,6 +12,7 @@ class Entity(sprite.Sprite):
     _speed = 0
     _damage = 0
     _shoot_direction = SHOOT_BOTTOM
+
     image = None
     rect = None
     
@@ -30,9 +32,9 @@ class Entity(sprite.Sprite):
         pass
 
 
-    def setImage(self, url):
-        self.image = image.load(url)
+    def setImage(self, url, width, height):
+        self.image = pygame.transform.scale(image.load(url).convert_alpha(), (width, height))
         self.rect = self.image.get_rect()
     
-    def draw(self):
+    def draw(self, screen):
         pass

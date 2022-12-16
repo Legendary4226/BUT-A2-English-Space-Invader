@@ -1,3 +1,5 @@
+import pygame
+
 class EntityManager:
     entities = []
 
@@ -14,10 +16,6 @@ class EntityManager:
             self.entities.remove(entity)
             del entity
 
-    def draw(self):
+    def draw(self, screen):
         for entity in self.entities:
-            entity.draw()
-
-    def event(self, events):
-        # TO DO
-        pass
+            entity.draw(screen)
