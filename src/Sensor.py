@@ -3,11 +3,12 @@ from pygame.locals import *
 from sense_hat import SenseHat
 
 pygame.init()
+pygame.clock.tick(5)
 sense = SenseHat()
 HEIGHT = 450
 WIDTH = 400
 
-def calculateVelocity(accelerometer,shipPosition):
+def calculateVelocity(accelerometer):
     if(accelerometer<0):
         #we go to the left
         if(accelerometer<-0.7):
@@ -28,7 +29,7 @@ def calculateVelocity(accelerometer,shipPosition):
             return 1
         else:
             return 0
-    return shipPosition
+    return 0
 
 
 screen = pygame.display.set_mode((WIDTH,HEIGHT))

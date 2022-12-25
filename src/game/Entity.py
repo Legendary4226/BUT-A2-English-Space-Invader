@@ -17,7 +17,7 @@ class Entity(sprite.Sprite):
         self._shoot_direction = SHOOT_BOTTOM
 
         self.image = None
-        self.rect = None
+        self.size = (20, 20)
     
     def initProperties(self):
         pass
@@ -30,8 +30,8 @@ class Entity(sprite.Sprite):
 
 
     def setImage(self, url, width, height):
+        self.size = (width, height)
         self.image = pygame.transform.scale(image.load(url).convert_alpha(), (width, height))
-        self.rect = self.image.get_rect()
     
     def draw(self, screen):
         pass

@@ -5,9 +5,9 @@ class SpeedInvader (Invader):
         self.initProperties()
 
     def initProperties(self) -> None:
-        self._damage = 5
+        self._damage = 10
         self._max_hp  = 75
-        self._hp = 75
-        self._speed = 0.2
+        self._hp = 50
+        self._speed = 2
         self._shoot_speed = 30
 
